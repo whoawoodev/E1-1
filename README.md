@@ -39,8 +39,8 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 ## 2) 수행 체크리스트
 - [x] 터미널 기본 조작 및 폴더 구성
 - [x] 권한 변경 실습
-- [ ] Docker 설치/점검
-- [ ] hello-world 실행
+- [x] Docker 설치/점검
+- [x] hello-world 실행
 - [ ] Dockerfile 빌드/실행
 - [ ] 포트 매핑 접속(2회)
 - [ ] 바인드 마운트 반영
