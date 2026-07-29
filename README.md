@@ -31,10 +31,10 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 - Github : 로그인/저장소 연동
 
 ## 1) 실행 환경
-- OS : ubuntu
-- Shell : bash
-- Docker :
-- Git :
+- OS : macOS 15.7.4
+- Shell : zsh
+- Docker : 28.5.2
+- Git : 2.53.0
 
 ## 2) 수행 체크리스트
 - [ ] 터미널 기본 조작 및 폴더 구성
