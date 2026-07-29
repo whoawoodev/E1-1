@@ -85,6 +85,10 @@ touch
 docker --version, docker info
 ```
 ```
+Docker version 28.5.2, build ecc6942
+```
+
+```
 docker images, docker ps -a, docker logs, docker stats
 ```
 
