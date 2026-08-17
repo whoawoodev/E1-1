@@ -124,7 +124,7 @@ docker images
 
 - 컨테이너 실행
 ```
-docker run / docker run -d -p 8080:80 --name
+docker run / docker run -d -p 8080:80 --name [이름] [이미지]
 ```
 
 - 컨테이너 중지
@@ -157,16 +157,18 @@ docker run hello-world
 docker run -it ubuntu bash
 ```
 
-- 컨테이너 종료/유지
+- OS 정보 확인
 ```
 cat /etc/os-release
 ```
 
+- 컨테이너 종료/나기기
 ```
 exit
 ```
 
 - 컨테이너 유지 상태로 빠져나오기 (Detach)
+
 Ctrl + P -> Ctrl + Q
 
 </details>
@@ -176,7 +178,7 @@ Ctrl + P -> Ctrl + Q
  
 - 커스텀이미지
 
-Dockerfile 작성
+Dockerfile 작성 (dockerfile 내용)
 ```
 FROM nginx:latest
 COPY index.html /usr/share/nginx/html/
@@ -217,7 +219,16 @@ docker volume create
  
 - Git 설정 및 GitHub
 ```
-git config --global user.name
+git config --global user.name [깃허브 이름]
+```
+
+```
+git config --global user.email [깃허브 이메일]
+```
+
+```
+git config --list
 ```
 
 ---
+
