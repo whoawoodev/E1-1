@@ -155,8 +155,6 @@ docker run hello-world
 - ubuntu 컨테이너 내부 명령
 ```
 docker run -it ubuntu bash
-
-
 ```
 
 - 컨테이너 종료/유지
