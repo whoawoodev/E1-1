@@ -102,15 +102,104 @@ touch
 <details>
 <summary>Docker 컨테이너 워크플로우 실습</summary>
 
+- Docker 버전 확인
 ```
-docker --version, docker info
+docker --version
 ```
+
+- Docker 데몬 동작 여부 확인
 ```
-Docker version 28.5.2, build ecc6942
+docker info
 ```
+
+- 이미지 다운로드
 ```
-docker images, docker ps -a, docker logs, docker stats
+~
+```
+- 이미지 목록 확인
+```
+docker images
+```
+
+- 컨테이너 실행
+```
+~
+```
+
+- 컨테이너 중지
+```
+~
+```
+
+- 컨테이너 목록 확인
+```
+docker ps -a
+```
+
+- 로그 확인
+```
+docker logs
+```
+
+- 리소스 확인
+```
+docker stats
+```
+
+- hello-world 실행 실습
+```
+~
+```
+
+- ubuntu 컨테이너 내부 명령
+```
+~
+```
+
+- 컨테이너 종료/유지
+```
+~
+```
+
+- ubuntu 컨테이너 내부 명령
+```
+~
 ```
 </details>
 
-### Git 설정 및 Github 연동
+<details>
+<summary>Dockerfile 커스텀 이미지 제작</summary>
+ 
+- 커스텀
+```
+~
+```
+</details>
+
+<details>
+<summary>포트 매핑</summary>
+ 
+- 포트 매핑 및 접속
+```
+~
+```
+</details>
+
+<details>
+<summary>볼륨 영속성</summary>
+ 
+- Docker 볼륨 영속성 검증
+```
+~
+```
+</details>
+
+<details>
+<summary>Git 설정 및 GitHub</summary>
+ 
+- Git 설정 및 GitHub
+```
+~
+```
+
+---
