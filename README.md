@@ -51,6 +51,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 
 <details>
 <summary>리눅스/터미널 기반 개발 환경 구축</summary>
+ 
 ```
 pwd
 ```
@@ -90,7 +91,6 @@ docker --version, docker info
 ```
 Docker version 28.5.2, build ecc6942
 ```
-
 ```
 docker images, docker ps -a, docker logs, docker stats
 ```
