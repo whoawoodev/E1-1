@@ -51,31 +51,39 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 
 <details>
 <summary>리눅스/터미널 기반 개발 환경 구축</summary>
- 
+- 현재 위치 확인 
 ```
 pwd
 ```
+- 목록 확인 (숨김파일 포함)
 ```
 ls -a
 ```
+- 이동
 ```
 cd
 ```
+- 생성
 ```
 mkdir
 ```
+- 복사
 ```
-cp -r
+cp / cp -r
 ```
+- 이동/이름변경
 ```
-mv / mv -i / mv -f
+mv
 ```
+- 삭제
 ```
-rm
+rm / rm -r
 ```
+- 파일 내용 확인
 ```
 cat / grep "filename" file
 ```
+- 빈 파일 생성
 ```
 touch
 ```
