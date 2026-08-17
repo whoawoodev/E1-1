@@ -220,6 +220,30 @@ docker run -d --name [컨테이너 이름] -p 8080:80 [이미지 이름]
 ```
 docker volume create
 ```
+
+```
+docker run -it --name con1 -v my-vol:/data ubuntu
+```
+
+```
+# 컨테이너 내부에서 입력
+echo "이 데이터는 살아남습니다!" > /data/test.txt
+exit
+```
+
+```
+docker rm con1
+```
+
+```
+docker run -it --name con2 -v my-vol:/data ubuntu
+```
+
+```
+# 컨테이너 내부에서 입력
+cat /data/test.txt
+```
+
 </details>
 
 <details>
