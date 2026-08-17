@@ -154,27 +154,46 @@ docker run hello-world
 
 - ubuntu 컨테이너 내부 명령
 ```
-~
+docker run -it ubuntu bash
+
+
 ```
 
 - 컨테이너 종료/유지
 ```
-~
+cat /etc/os-release
 ```
 
-- 
 ```
-~
+exit
 ```
+
+- 컨테이너 유지 상태로 빠져나오기 (Detach)
+Ctrl + P -> Ctrl + Q
+
 </details>
 
 <details>
 <summary>Dockerfile 커스텀 이미지 제작</summary>
  
-- 커스텀
+- 커스텀이미지
+
+Dockerfile 작성
 ```
-~
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/
 ```
+
+커스텀 이미지 빌드
+```
+docker build -t [이미지 이름] .
+```
+
+빌드한 이미지로 컨테이너 실행
+```
+docker run -d -p 8080:80 [이미지 이름]
+```
+
 </details>
 
 <details>
@@ -182,7 +201,7 @@ docker run hello-world
  
 - 포트 매핑 및 접속
 ```
-~
+docker run -d --name [컨테이너 이름] -p 8080:80 [이미지 이름]
 ```
 </details>
 
@@ -191,7 +210,7 @@ docker run hello-world
  
 - Docker 볼륨 영속성 검증
 ```
-~
+docker volume create
 ```
 </details>
 
@@ -200,7 +219,7 @@ docker run hello-world
  
 - Git 설정 및 GitHub
 ```
-~
+git config --global user.name
 ```
 
 ---
