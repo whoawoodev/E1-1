@@ -49,11 +49,8 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 
  # 3) 수행 로그
 
-### 리눅스/터미널 기반 개발 환경 구축
 <details>
 <summary>리눅스/터미널 기반 개발 환경 구축</summary>
-
-
 ```
 pwd
 ```
@@ -81,11 +78,11 @@ cat / grep "filename" file
 ```
 touch
 ```
-
 </details>
 
 
-### Docker 컨테이너 워크플로우 실습
+<details>
+<summary>Docker 컨테이너 워크플로우 실습</summary>
 
 ```
 docker --version, docker info
@@ -97,5 +94,6 @@ Docker version 28.5.2, build ecc6942
 ```
 docker images, docker ps -a, docker logs, docker stats
 ```
+</details>
 
 ### Git 설정 및 Github 연동
