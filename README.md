@@ -114,8 +114,9 @@ docker info
 
 - 이미지 다운로드
 ```
-~
+docker pull
 ```
+
 - 이미지 목록 확인
 ```
 docker images
@@ -123,12 +124,12 @@ docker images
 
 - 컨테이너 실행
 ```
-~
+docker run / docker run -d -p 8080:80 --name
 ```
 
 - 컨테이너 중지
 ```
-~
+docker stop
 ```
 
 - 컨테이너 목록 확인
@@ -148,7 +149,7 @@ docker stats
 
 - hello-world 실행 실습
 ```
-~
+docker run hello-world
 ```
 
 - ubuntu 컨테이너 내부 명령
@@ -161,7 +162,7 @@ docker stats
 ~
 ```
 
-- ubuntu 컨테이너 내부 명령
+- 
 ```
 ~
 ```
