@@ -252,6 +252,11 @@ empty.txt	test.txt
 <br>
 <br>
 
+- 원래 위치로 복귀
+```bash
+(사용자) permdir % cd ..
+```
+
 </details>
 
 <details>
@@ -352,6 +357,11 @@ root@[컨테이너ID]:/# exit
 
 - 컨테이너 유지 상태로 빠져나오기 (Detach)
 
+```bash
+(사용자) codyssey % docker run -it --name detach-test ubuntu bash
+root@[컨테이너ID]:/#
+```
+
 <br>
 
 Ctrl + P -> Ctrl + Q
@@ -379,7 +389,7 @@ Ctrl + P -> Ctrl + Q
 <br>
 
 ```bash
-(사용자) codyssey % docker exec -it [컨테이너 이름] bash
+(사용자) codyssey % docker exec -it detach-test bash
 ```
 <br>
 <br>
@@ -399,6 +409,15 @@ Ctrl + P -> Ctrl + Q
 - 작업 폴더 및 index.html 생성
 ```bash
 (사용자) codyssey % mkdir docker-practice && cd docker-practice
+```
+
+```bash
+(사용자) docker-practice % cat > Dockerfile << 'EOF'
+# Nginx 기본 이미지 사용
+FROM nginx:latest
+# 작성한 index.html을 컨테이너 내부의 웹 서버 폴더로 복사
+COPY index.html /usr/share/nginx/html/
+EOF
 ```
 
 ```bash
