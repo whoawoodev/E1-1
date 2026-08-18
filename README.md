@@ -111,8 +111,12 @@ codyssey
 
 - 복사
 ```
-cp [원본 파일] [사본 이름]
-cp -r [원본 폴더] [사본 폴더]
+cp -r -r codyssey codyssey-test
+ls
+```
+
+```
+codyssey	codyssey-test
 ```
 <br>
 <br>
