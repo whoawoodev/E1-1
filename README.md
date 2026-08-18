@@ -250,12 +250,12 @@ COPY index.html /usr/share/nginx/html/
 
 - 커스텀 이미지 빌드
 ```
-docker build -t [이미지 이름] ./docker-practice
+docker build -t my-nginx:1.0 .
 ```
 
 - 빌드한 이미지로 컨테이너 실행
 ```
-docker run -d -p 8080:80 [이미지 이름]
+docker run -d -p 8080:80 --name custom-web my-nginx:1.0
 ```
 
 </details>
