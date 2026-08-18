@@ -60,7 +60,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 
 <br>
 
- # 3) 수행 로그
+ ## 3) 수행 로그
 
 <details>
 <summary>리눅스/터미널 기반 개발 환경 구축</summary>
@@ -582,4 +582,4 @@ git push -u origin main
 
 <br>
 
- # 4) 트러블슈팅
+ ## 4) 트러블슈팅
