@@ -67,7 +67,7 @@ pwd
 ```
 
 ```
-/Users/(사용자명)
+/Users/(사용자)
 ```
 <br>
 <br>
@@ -88,14 +88,23 @@ ls -a
  
 - 이동
 ```
-cd [이동할 경로]
+cd Documents
+```
+
+```
+(사용자) Documents %
 ```
 <br>
 <br>
 
 - 생성
 ```
-mkdir [폴더 이름]
+mkdir codyssey
+ls
+```
+
+```
+codyssey
 ```
 <br>
 <br>
