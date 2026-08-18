@@ -25,6 +25,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 
 - 커스텀 이미지 제작
 - 포트 매핑
+- 바인드 마운트
 - 볼륨 생성, 영속성 검증
 
 ### Git 설정 및 Github 연동
@@ -106,6 +107,40 @@ touch
 ```
 </details>
 
+<details>
+<summary>권한 (파일 + 디렉토리)</summary>
+
+ - 파일 생성 및 권한 확인
+```
+cd ~/codyssey/practice && echo 'echo "hello perm"' > perm.sh && ls -l perm.sh
+```
+
+- 실행 시도 (Permission denied)
+```
+./perm.sh
+```
+
+- 실행 권한 부여 후 재실행
+```
+chmod 755 perm.sh && ls -l perm.sh && ./perm.sh
+```
+
+- 디렉토리 권한 확인
+```
+mkdir permdir && ls -ld permdir
+```
+
+- 진입 권한 제거 후 cd 시도
+```
+chmod 600 permdir && ls -ld permdir && cd permdir
+```
+
+- 권한 복구 후 진입
+```
+chmod 755 permdir && ls -ld permdir && cd permdir && pwd
+```
+
+</details>
 
 <details>
 <summary>Docker 컨테이너 워크플로우 실습</summary>
@@ -179,25 +214,48 @@ exit
 
 Ctrl + P -> Ctrl + Q
 
+- 컨테이너 종료/유지 차이
+
+동작 | 명령 | 컨테이너 상태 | `docker ps`
+종료 | `exit` | Exited | 안 보임 (`docker ps -a`에만 보임)
+유지 | `Ctrl+P` → `Ctrl+Q` | Up | 보임
+
+`docker run -it ubuntu bash`로 실행하면 bash가 컨테이너의 메인 프로세스가 된다.
+`exit`은 그 bash를 끝내는 것이라 메인 프로세스가 사라지고 컨테이너까지 종료된다.
+`Ctrl+P → Ctrl+Q`는 터미널 연결만 끊는(detach) 것이라 bash는 계속 살아 있고 컨테이너도 Up 상태로 남는다.
+다시 들어갈 때는 `docker attach [이름]` 또는 `docker exec -it [이름] bash`를 사용한다.
+
+```
+docker ps -a
+```
+
+```
+docker exec -it [컨테이너 이름] bash
+```
 </details>
 
 <details>
 <summary>Dockerfile 커스텀 이미지 제작</summary>
  
-- 커스텀이미지
+- 선택한 방식 : (A) 웹 서버 베이스 이미지 + 정적 콘텐츠 교체
+- 베이스 이미지 : `nginx:latest`
+- 커스텀 포인트
+  - `COPY index.html /usr/share/nginx/html/`
+    - 목적 : nginx 기본 안내 페이지를 직접 작성한 페이지로 교체하여, 베이스 이미지를 그대로 쓰지 않고 내 콘텐츠가 반영된 별도 이미지를 만든다.
+    - 이미지에 콘텐츠가 포함되므로 컨테이너를 몇 번 다시 실행해도 같은 결과가 재현된다.
 
-Dockerfile 작성 (dockerfile 내용)
+- Dockerfile 작성 (dockerfile 내용)
 ```
 FROM nginx:latest
 COPY index.html /usr/share/nginx/html/
 ```
 
-커스텀 이미지 빌드
+- 커스텀 이미지 빌드
 ```
 docker build -t [이미지 이름] .
 ```
 
-빌드한 이미지로 컨테이너 실행
+- 빌드한 이미지로 컨테이너 실행
 ```
 docker run -d -p 8080:80 [이미지 이름]
 ```
@@ -207,10 +265,59 @@ docker run -d -p 8080:80 [이미지 이름]
 <details>
 <summary>포트 매핑</summary>
  
-- 포트 매핑 및 접속
+- 8080 포트로 실행
 ```
-docker run -d --name [컨테이너 이름] -p 8080:80 [이미지 이름]
+docker run -d --name web-8080 -p 8080:80 [이미지 이름]
 ```
+
+- 8081 포트로 실행 (같은 이미지, 다른 포트)
+```
+docker run -d --name web-8081 -p 8081:80 [이미지 이름]
+```
+
+- 실행 중인 컨테이너 확인
+```
+docker ps
+```
+
+- 접속 확인
+```
+curl http://localhost:8080
+```
+
+```
+curl http://localhost:8081
+```
+</details>
+
+<details>
+<summary>바인드 마운트</summary>
+
+- 호스트 디렉토리 및 파일 생성
+```
+mkdir -p ~/codyssey/practice/site && echo "<h1>before</h1>" > ~/codyssey/practice/site/index.html
+```
+
+- 바인드 마운트로 컨테이너 실행
+```
+docker run -d --name bind-test -p 8082:80 -v ~/codyssey/practice/site:/usr/share/nginx/html nginx
+```
+
+- 변경 전 응답 확인
+```
+curl http://localhost:8082
+```
+
+- 호스트 파일 수정 후 응답 확인 (컨테이너 재시작 없음)
+```
+echo "<h1>after</h1>" > ~/codyssey/practice/site/index.html && curl http://localhost:8082
+```
+
+- 컨테이너 정리
+```
+docker rm -f bind-test
+```
+
 </details>
 
 <details>
@@ -249,7 +356,7 @@ cat /data/test.txt
 <details>
 <summary>Git 설정 및 GitHub</summary>
  
-- Git 설정 및 GitHub
+- Git 사용자 정보 설정
 ```
 git config --global user.name [깃허브 이름]
 ```
@@ -258,9 +365,39 @@ git config --global user.name [깃허브 이름]
 git config --global user.email [깃허브 이메일]
 ```
 
+- 기본 브랜치 설정
+```
+git config --global init.defaultBranch main
+```
+
+- 설정 확인
 ```
 git config --list
 ```
 
----
+- 저장소 초기화
+```
+git init
+```
 
+- GitHub 원격 저장소 연결
+```
+git remote add origin [저장소 주소]
+```
+
+- 커밋 및 푸시
+```
+git add .
+```
+
+```
+git commit -m "docs: 과제1 수행 로그"
+```
+
+```
+git push -u origin main
+```
+
+</details>
+
+---
