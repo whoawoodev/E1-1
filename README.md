@@ -262,15 +262,20 @@ docker run -d -p 8080:80 --name custom-web my-nginx:1.0
 
 <details>
 <summary>포트 매핑</summary>
+
+- 앞 실습 컨테이너 정리
+```
+docker rm -f custom-web
+```
  
 - 8080 포트로 실행
 ```
-docker run -d --name web-8080 -p 8080:80 [이미지 이름]
+docker run -d --name web-8080 -p 8080:80 my-nginx:1.0
 ```
 
 - 8081 포트로 실행 (같은 이미지, 다른 포트)
 ```
-docker run -d --name web-8081 -p 8081:80 [이미지 이름]
+docker run -d --name web-8081 -p 8081:80 my-nginx:1.0
 ```
 
 - 실행 중인 컨테이너 확인
@@ -313,7 +318,7 @@ echo "<h1>Bind Mount Test - After</h1>" > bind-html/index.html && curl http://lo
 
 - 컨테이너 정리
 ```
-docker rm -f custom-web
+docker rm -f bind-test
 ```
 
 </details>
