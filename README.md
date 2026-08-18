@@ -328,7 +328,7 @@ docker rm -f bind-test
  
 - Docker 볼륨 생성
 ```
-docker volume create [볼륨 이름]
+docker volume create my-vol
 ```
 
 ```
