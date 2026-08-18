@@ -296,19 +296,29 @@ curl http://localhost:8081
 <summary>바인드 마운트</summary>
 
 - 호스트 디렉토리 및 파일 생성
+```
 mkdir bind-html && echo "<h1>Bind Mount Test - Before</h1>" > bind-html/index.html
+```
 
 - 바인드 마운트로 컨테이너 실행
+```
 docker run -d --name bind-test -p 8082:80 -v $(pwd)/bind-html:/usr/share/nginx/html nginx
+```
 
 - 변경 전 응답 확인
+```
 curl http://localhost:8082
+```
 
 - 호스트 파일 수정 후 응답 확인 (컨테이너 재시작 없음)
+```
 echo "<h1>Bind Mount Test - After</h1>" > bind-html/index.html && curl http://localhost:8082
+```
 
 - 컨테이너 정리
+```
 docker rm -f bind-test
+```
 
 </details>
 
