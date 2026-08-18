@@ -41,7 +41,6 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 - Github : 로그인/저장소 연동
 
 <br>
-<br>
 
 ## 1) 실행 환경
 - OS : macOS 15.7.4
@@ -49,7 +48,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 - Docker : 28.5.2
 - Git : 2.53.0
 
-
+<br>
 
 ## 2) 수행 체크리스트
 - [x] 터미널 기본 조작 및 폴더 구성
@@ -62,7 +61,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 - [x] 볼륨 영속성
 - [x] Git 설정 + VSCode GitHub 연동
 
-
+<br>
 
  # 3) 수행 로그
 
@@ -584,4 +583,6 @@ git push -u origin main
 
 </details>
 
----
+<br>
+
+ # 4) 트러블슈팅
