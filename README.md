@@ -278,7 +278,7 @@ empty.txt	test.txt
 
 - 이미지 다운로드
 ```bash
-(사용자) codyssey % docker pull [이미지 이름]
+(사용자) codyssey % docker pull nginx
 ```
 <br>
 <br>
@@ -297,16 +297,9 @@ empty.txt	test.txt
 <br>
 <br>
 
-- 컨테이너 중지
+- 리소스 확인
 ```bash
-(사용자) codyssey % docker stop nginx-test
-```
-<br>
-<br>
-
-- 컨테이너 목록 확인
-```bash
-(사용자) codyssey % docker ps -a
+(사용자) codyssey % docker stats --no-stream
 ```
 <br>
 <br>
@@ -318,9 +311,16 @@ empty.txt	test.txt
 <br>
 <br>
 
-- 리소스 확인
+- 컨테이너 중지
 ```bash
-(사용자) codyssey % docker stats --no-stream
+(사용자) codyssey % docker stop nginx-test
+```
+<br>
+<br>
+
+- 컨테이너 목록 확인
+```bash
+(사용자) codyssey % docker ps -a
 ```
 <br>
 <br>
@@ -390,6 +390,14 @@ Ctrl + P -> Ctrl + Q
 
 ```bash
 (사용자) codyssey % docker exec -it detach-test bash
+```
+<br>
+<br>
+
+- 실습 컨테이너 정리
+```bash
+root@[컨테이너ID]:/# exit
+(사용자) codyssey % docker rm -f nginx-test detach-test
 ```
 <br>
 <br>
@@ -494,6 +502,13 @@ COPY index.html /usr/share/nginx/html/
 <br>
 <br>
 
+- 실습 컨테이너 정리
+```bash
+(사용자) docker-practice % docker rm -f web-8080 web-8081
+```
+<br>
+<br>
+
 </details>
 
 <details>
@@ -556,7 +571,7 @@ root@[컨테이너ID]:/#
 
 - 컨테이너 내부에서 파일 생성
 ```bash
-root@[컨테이너ID]:/# echo "이 데이터는 살아남습니다!" > /data/test.txt
+root@[컨테이너ID]:/# echo "this data survives" > /data/test.txt
 root@[컨테이너ID]:/# exit
 ```
 <br>
@@ -580,6 +595,14 @@ root@[컨테이너ID]:/#
 - 데이터 유지 확인
 ```bash
 root@[컨테이너ID]:/# cat /data/test.txt
+```
+<br>
+<br>
+
+- 실습 컨테이너 및 볼륨 정리
+```bash
+root@[컨테이너ID]:/# exit
+(사용자) docker-practice % docker rm con2 && docker volume rm my-vol
 ```
 <br>
 <br>
