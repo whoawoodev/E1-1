@@ -67,7 +67,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 
 - 현재 위치 확인
 ```
-pwd
+(사용자) ~ % pwd
 ```
 
 ```
@@ -126,16 +126,46 @@ codyssey	codyssey-test
 <br>
 
 - 이동/이름변경
+
+이름변경
 ```
-mv [원본 이름] [바꿀 이름]
+mv codyssey-test codyssey-mv-test
+ls
+```
+
+```
+codyssey		codyssey-mv-test
+```
+
+이동
+```
+mv codyssey-mv-test codyssey
+ls
+```
+
+```
+codyssey
+```
+
+```
+cd codyssey
+ls
+```
+
+```
+codyssey-mv-test
 ```
 <br>
 <br>
 
 - 삭제
 ```
-rm [파일 이름]
-rm -r [폴더 이름]
+rm -r codyssey-mv-test
+ls
+```
+
+```
+
 ```
 <br>
 <br>
