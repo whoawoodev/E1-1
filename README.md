@@ -115,7 +115,7 @@ codyssey
 
 - 복사
 ```
-cp -r -r codyssey codyssey-test
+cp -r codyssey codyssey-test
 ls
 ```
 
