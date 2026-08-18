@@ -71,6 +71,11 @@ pwd
 - 목록확인 (숨김파일 포함)
 ```
 ls -a
+
+.			.orbstack		.zsh_history		Downloads		OrbStack
+..			.ssh			.zsh_sessions		Library			Pictures
+.CFUserTextEncoding	.Trash			Desktop			Movies			Public
+.docker			.vscode			Documents		Music
 ```
  
 - 이동
