@@ -61,49 +61,36 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 <details>
 <summary>리눅스/터미널 기반 개발 환경 구축</summary>
  
-- 현재 위치 확인 
-```
-pwd
-```
-
-- 목록 확인 (숨김파일 포함)
-```
-ls -a
-```
-
 - 이동
 ```
-cd
+cd [이동할 경로]
 ```
-
 - 생성
 ```
-mkdir
+mkdir [폴더 이름]
 ```
-
 - 복사
 ```
-cp / cp -r
+cp [원본 파일] [사본 이름]
+cp -r [원본 폴더] [사본 폴더]
 ```
-
 - 이동/이름변경
 ```
-mv
+mv [원본 이름] [바꿀 이름]
 ```
-
 - 삭제
 ```
-rm / rm -r
+rm [파일 이름]
+rm -r [폴더 이름]
 ```
-
 - 파일 내용 확인
 ```
-cat / grep "filename" file
+cat [파일 이름]
+grep "[찾을 문자열]" [파일 이름]
 ```
-
 - 빈 파일 생성
 ```
-touch
+touch [파일 이름]
 ```
 </details>
 
@@ -157,7 +144,7 @@ docker info
 
 - 이미지 다운로드
 ```
-docker pull
+docker pull [이미지 이름]
 ```
 
 - 이미지 목록 확인
@@ -172,7 +159,7 @@ docker run / docker run -d -p 8080:80 --name [이름] [이미지]
 
 - 컨테이너 중지
 ```
-docker stop
+docker stop [컨테이너 이름]
 ```
 
 - 컨테이너 목록 확인
@@ -182,12 +169,12 @@ docker ps -a
 
 - 로그 확인
 ```
-docker logs
+docker logs [컨테이너 이름]
 ```
 
 - 리소스 확인
 ```
-docker stats
+docker stats --no-stream
 ```
 
 - hello-world 실행 실습
@@ -334,9 +321,9 @@ docker rm -f bind-test
 <details>
 <summary>볼륨 영속성</summary>
  
-- Docker 볼륨 영속성 검증
+- Docker 볼륨 생성
 ```
-docker volume create
+docker volume create [볼륨 이름]
 ```
 
 ```
