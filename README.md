@@ -313,7 +313,7 @@ echo "<h1>Bind Mount Test - After</h1>" > bind-html/index.html && curl http://lo
 
 - 컨테이너 정리
 ```
-docker rm -f bind-test
+docker rm -f custom-web
 ```
 
 </details>
