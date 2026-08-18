@@ -70,6 +70,7 @@ pwd
 /Users/(사용자명)
 ```
 <br>
+<br>
 
 - 목록확인 (숨김파일 포함)
 ```
@@ -82,6 +83,8 @@ ls -a
 .CFUserTextEncoding	.Trash			Desktop			Movies			Public
 .docker			.vscode			Documents		Music
 ```
+<br>
+<br>
  
 - 이동
 ```
