@@ -67,7 +67,7 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 <br>
  
 - 현재 위치 확인
-```
+```bash
 (사용자) ~ % pwd
 ```
 
@@ -78,8 +78,8 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 <br>
 
 - 목록확인 (숨김파일 포함)
-```
-ls -a
+```bash
+(사용자) ~ % ls -a
 ```
 
 ```
@@ -92,8 +92,8 @@ ls -a
 <br>
  
 - 이동
-```
-cd Documents
+```bash
+(사용자) ~ % cd Documents
 ```
 
 ```
@@ -103,9 +103,9 @@ cd Documents
 <br>
 
 - 생성
-```
-mkdir codyssey
-ls
+```bash
+(사용자) Documents % mkdir codyssey
+(사용자) Documents % ls
 ```
 
 ```
@@ -115,9 +115,9 @@ codyssey
 <br>
 
 - 복사
-```
-cp -r codyssey codyssey-test
-ls
+```bash
+(사용자) Documents % cp -r codyssey codyssey-test
+(사용자) Documents % ls
 ```
 
 ```
@@ -130,9 +130,9 @@ codyssey	codyssey-test
 <br>
 
 이름변경
-```
-mv codyssey-test codyssey-mv-test
-ls
+```bash
+(사용자) Documents % mv codyssey-test codyssey-mv-test
+(사용자) Documents % ls
 ```
 
 ```
@@ -141,18 +141,18 @@ codyssey		codyssey-mv-test
 <br>
 
 이동
-```
-mv codyssey-mv-test codyssey
-ls
+```bash
+(사용자) Documents % mv codyssey-mv-test codyssey
+(사용자) Documents % ls
 ```
 
 ```
 codyssey
 ```
 
-```
-cd codyssey
-ls
+```bash
+(사용자) Documents % cd codyssey
+(사용자) codyssey % ls
 ```
 
 ```
@@ -162,28 +162,45 @@ codyssey-mv-test
 <br>
 
 - 삭제
-```
-rm -r codyssey-mv-test
-ls
-```
-
+```bash
+(사용자) codyssey % rm -r codyssey-mv-test
+(사용자) codyssey % ls
 ```
 
+```
+(출력 없음 - 삭제 완료)
 ```
 <br>
 <br>
 
 - 파일 내용 확인
+```bash
+(사용자) codyssey % echo "hello codyssey" > test.txt
+(사용자) codyssey % cat test.txt
 ```
-cat [파일 이름]
-grep "[찾을 문자열]" [파일 이름]
+
+```
+hello codyssey
+```
+
+```bash
+(사용자) codyssey % grep "codyssey" test.txt
+```
+
+```
+hello codyssey
 ```
 <br>
 <br>
 
 - 빈 파일 생성
+```bash
+(사용자) codyssey % touch empty.txt
+(사용자) codyssey % ls
 ```
-touch [파일 이름]
+
+```
+empty.txt	test.txt
 ```
 <br>
 <br>
