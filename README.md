@@ -64,14 +64,18 @@ CLI 환경에서 터미널/Docker의 핵심 기능을 익히고, Git/GitHub과 �
 - 현재 위치 확인
 ```
 pwd
+```
 
+```
 /Users/(사용자명)
 ```
 
 - 목록확인 (숨김파일 포함)
 ```
 ls -a
+```
 
+```
 .			.orbstack		.zsh_history		Downloads		OrbStack
 ..			.ssh			.zsh_sessions		Library			Pictures
 .CFUserTextEncoding	.Trash			Desktop			Movies			Public
