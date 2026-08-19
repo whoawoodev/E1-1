@@ -50,10 +50,10 @@ E1-1/
 | 01 | ✅ | 터미널 기본 조작 (생성·복사·이동·삭제, 파일 내용 확인) | [docs/01-terminal.md](docs/01-terminal.md) |
 | 02 | ✅ | 파일·디렉토리 권한 확인 및 변경 | [docs/02-permission.md](docs/02-permission.md) |
 | 03 | ✅ | Docker 점검, 컨테이너 운영, 이미지·컨테이너 정리 | [docs/03-docker.md](docs/03-docker.md) |
-| 04 | ⬜ | Dockerfile로 커스텀 이미지 제작 | [docs/04-dockerfile.md](docs/04-dockerfile.md) |
-| 05 | ⬜ | 포트 매핑 및 브라우저 접속 확인 | [docs/05-port.md](docs/05-port.md) |
-| 06 | ⬜ | 바인드 마운트로 호스트 변경 반영 | [docs/06-bind-mount.md](docs/06-bind-mount.md) |
-| 07 | ⬜ | 볼륨 생성 및 데이터 영속성 검증 | [docs/07-volume.md](docs/07-volume.md) |
+| 04 | ✅ | Dockerfile로 커스텀 이미지 제작 | [docs/04-dockerfile.md](docs/04-dockerfile.md) |
+| 05 | ✅ | 포트 매핑 및 브라우저 접속 확인 | [docs/05-port.md](docs/05-port.md) |
+| 06 | ✅ | 바인드 마운트로 호스트 변경 반영 | [docs/06-bind-mount.md](docs/06-bind-mount.md) |
+| 07 | ✅ | 볼륨 생성 및 데이터 영속성 검증 | [docs/07-volume.md](docs/07-volume.md) |
 | 08 | ⬜ | Git 사용자 정보·기본 브랜치 설정, GitHub 연동 | [docs/08-git-github.md](docs/08-git-github.md) |
 
 <br>
