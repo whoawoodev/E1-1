@@ -12,7 +12,7 @@
     - 목적 : nginx 기본 안내 페이지를 직접 작성한 페이지로 교체하여, 베이스 이미지를 그대로 쓰지 않고 내 콘텐츠가 반영된 별도 이미지를 만든다.
     - 이미지에 콘텐츠가 포함되므로 컨테이너를 몇 번 다시 실행해도 같은 결과가 재현된다.
 
-- 작업 폴더 및 index.html 생성
+- 작업 폴더 · Dockerfile · index.html 생성
 ```bash
 (사용자) codyssey % mkdir docker-practice && cd docker-practice
 ```
@@ -28,16 +28,6 @@ EOF
 
 ```bash
 (사용자) docker-practice % echo "<h1>Hello Docker! My Custom Image</h1>" > index.html
-```
-<br>
-<br>
-
-- Dockerfile 작성 (dockerfile 내용)
-```
-# Nginx 기본 이미지 사용
-FROM nginx:latest
-# 작성한 index.html을 컨테이너 내부의 웹 서버 폴더로 복사
-COPY index.html /usr/share/nginx/html/
 ```
 <br>
 <br>
