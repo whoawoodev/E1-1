@@ -61,16 +61,7 @@ E1-1/
 
 <br>
 
-## IV. 동작 구조 설계
-
-| 질문 | 답변 |
-| --- | --- |
-| 프로젝트 디렉토리 구조를 어떤 기준으로 구성했는가? | |
-| 포트/볼륨 설정을 어떤 방식으로 재현 가능하게 정리했는가? | |
-
-<br>
-
-## V. 핵심 기술 원리
+## IV. 핵심 기술 원리
 
 ### 이미지와 컨테이너의 차이를 빌드/실행/변경 관점에서 구분하면?
 
@@ -117,7 +108,7 @@ E1-1/
 > 관련 문서 : [02. 권한](docs/02-permission.md)
 <br>
 
-## VI. 심층 인터뷰
+## V. 심층 인터뷰
 
 ### 호스트 포트가 이미 사용 중이라 포트 매핑이 실패한다면, 어떤 순서로 원인을 진단하는가?
 
@@ -157,7 +148,7 @@ E1-1/
 > 관련 문서 : [트러블슈팅](troubleshooting/)
 <br>
 
-## VII. 트러블슈팅
+## VI. 트러블슈팅
 
 - [문제 1 — git push 인증 실패 (Password authentication is not supported)](troubleshooting/README.md#문제-1--git-push-인증-실패-password-authentication-is-not-supported)
 - [문제 2 — 바인드 마운트 후 컨테이너가 모듈을 찾지 못함 (Cannot find module)](troubleshooting/README.md#문제-2--바인드-마운트-후-컨테이너가-모듈을-찾지-못함-cannot-find-module)
