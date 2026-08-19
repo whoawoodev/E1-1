@@ -399,10 +399,58 @@ Ctrl + P -> Ctrl + Q
 root@[컨테이너ID]:/# exit
 (사용자) codyssey % docker rm -f nginx-test detach-test
 ```
+
+```
+```
+<br>
+
+이름을 지정하지 않고 실행한 컨테이너(hello-world, ubuntu)는 종료 후에도 남아 있으므로 함께 삭제한다.
+
+```bash
+(사용자) codyssey % docker container prune -f
+```
+
+```
+```
+<br>
+
+- 컨테이너 정리 확인
+```bash
+(사용자) codyssey % docker ps -a
+```
+
+```
+```
 <br>
 <br>
 
-</details>
+- 이미지 정리 전 목록
+```bash
+(사용자) codyssey % docker images
+```
+
+```
+```
+<br>
+
+- 이후 실습에서 사용하지 않는 이미지 삭제
+```bash
+(사용자) codyssey % docker rmi hello-world
+```
+
+```
+```
+<br>
+
+- 이미지 정리 확인
+```bash
+(사용자) codyssey % docker images
+```
+
+```
+```
+<br>
+<br>
 
 <details>
 <summary>Dockerfile 커스텀 이미지 제작</summary>
@@ -603,71 +651,6 @@ root@[컨테이너ID]:/# cat /data/test.txt
 ```bash
 root@[컨테이너ID]:/# exit
 (사용자) docker-practice % docker rm con2 && docker volume rm my-vol
-```
-<br>
-<br>
-
-</details>
-
-<details>
-<summary>실습 정리 (컨테이너 / 이미지)</summary>
-
-- 남은 컨테이너 확인
-```bash
-(사용자) docker-practice % docker ps -a
-```
-
-```
-```
-<br>
-<br>
-
-- 정지된 컨테이너 일괄 삭제
-```bash
-(사용자) docker-practice % docker container prune -f
-```
-
-```
-```
-<br>
-<br>
-
-- 삭제 후 컨테이너 목록 확인
-```bash
-(사용자) docker-practice % docker ps -a
-```
-
-```
-```
-<br>
-<br>
-
-- 이미지 목록 확인
-```bash
-(사용자) docker-practice % docker images
-```
-
-```
-```
-<br>
-<br>
-
-- 실습에 사용한 이미지 삭제
-```bash
-(사용자) docker-practice % docker rmi my-nginx:1.0 nginx ubuntu hello-world
-```
-
-```
-```
-<br>
-<br>
-
-- 삭제 후 이미지 목록 확인
-```bash
-(사용자) docker-practice % docker images
-```
-
-```
 ```
 <br>
 <br>
