@@ -12,6 +12,9 @@ CLI 환경에서 터미널과 Docker의 핵심 기능을 익히고, Git/GitHub�
 ```
 E1-1/
 ├── README.md                  # 수행 항목 요약과 문서 링크
+├── app/                       # 04에서 빌드에 사용한 소스
+│   ├── Dockerfile
+│   └── index.html
 ├── docs/                      # 항목별 수행 로그 (명령어 + 실행 결과)
 │   ├── 01-terminal.md
 │   ├── 02-permission.md

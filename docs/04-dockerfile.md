@@ -7,6 +7,7 @@
  
 - 선택한 방식 : (A) 웹 서버 베이스 이미지 + 정적 콘텐츠 교체
 - 베이스 이미지 : `nginx:latest`
+- 소스 : [`app/Dockerfile`](../app/Dockerfile) · [`app/index.html`](../app/index.html)
 - 커스텀 포인트
   - `COPY index.html /usr/share/nginx/html/`
     - 목적 : nginx 기본 안내 페이지를 직접 작성한 페이지로 교체하여, 베이스 이미지를 그대로 쓰지 않고 내 콘텐츠가 반영된 별도 이미지를 만든다.
