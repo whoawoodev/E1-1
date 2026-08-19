@@ -143,7 +143,13 @@ E1-1/
 
 ### 이 미션에서 가장 어려웠던 지점과 해결 과정(가설 → 확인 → 조치)은?
 
-<!-- 트러블슈팅 문서 작성 후 요약 -->
+08의 GitHub 연동에서 `git push`가 인증에 실패한 지점이다. 사용자명과 비밀번호를 정확히 입력했는데도 거부되어, 처음에는 오타나 계정 문제를 의심했다.
+
+- **가설** — 비밀번호가 틀렸을 가능성과, GitHub이 HTTPS 방식의 Git 작업에서 비밀번호 인증 자체를 받지 않을 가능성 두 가지를 세웠다.
+- **확인** — 에러 메시지가 `Password authentication is not supported for Git operations`였다. 비밀번호가 틀렸다면 틀렸다고(`Invalid username or password`) 답했을 텐데 지원하지 않는다고(`not supported`) 답했으므로, 값의 정오가 아니라 인증 방식이 거부된 것이다.
+- **조치** — 토큰을 직접 발급하는 대신 VSCode의 GitHub 로그인을 사용했다. 발급된 자격 증명이 `osxkeychain`에 저장되고, `git config --list`에서 확인했듯 `credential.helper=osxkeychain`이 이미 설정되어 있어 터미널의 `git` 명령도 같은 자격 증명을 사용한다.
+
+입력값을 다시 확인하는 대신 에러 메시지가 무엇을 거부했는지 읽은 것이 분기점이었다. GUI에서 로그인했는데 CLI가 함께 통과되는 것도, 두 도구가 같은 자격 증명 저장소를 공유하기 때문이다.
 
 > 관련 문서 : [트러블슈팅](troubleshooting/)
 <br>
@@ -151,3 +157,4 @@ E1-1/
 ## VII. 트러블슈팅
 
 - [문제 1 — git push 인증 실패 (Password authentication is not supported)](troubleshooting/README.md#문제-1--git-push-인증-실패-password-authentication-is-not-supported)
+- [문제 2 — 바인드 마운트 후 컨테이너가 모듈을 찾지 못함 (Cannot find module)](troubleshooting/README.md#문제-2--바인드-마운트-후-컨테이너가-모듈을-찾지-못함-cannot-find-module)
