@@ -610,6 +610,72 @@ root@[컨테이너ID]:/# exit
 </details>
 
 <details>
+<summary>실습 정리 (컨테이너 / 이미지)</summary>
+
+- 남은 컨테이너 확인
+```bash
+(사용자) docker-practice % docker ps -a
+```
+
+```
+```
+<br>
+<br>
+
+- 정지된 컨테이너 일괄 삭제
+```bash
+(사용자) docker-practice % docker container prune -f
+```
+
+```
+```
+<br>
+<br>
+
+- 삭제 후 컨테이너 목록 확인
+```bash
+(사용자) docker-practice % docker ps -a
+```
+
+```
+```
+<br>
+<br>
+
+- 이미지 목록 확인
+```bash
+(사용자) docker-practice % docker images
+```
+
+```
+```
+<br>
+<br>
+
+- 실습에 사용한 이미지 삭제
+```bash
+(사용자) docker-practice % docker rmi my-nginx:1.0 nginx ubuntu hello-world
+```
+
+```
+```
+<br>
+<br>
+
+- 삭제 후 이미지 목록 확인
+```bash
+(사용자) docker-practice % docker images
+```
+
+```
+```
+<br>
+<br>
+
+</details>
+
+
+<details>
 <summary>Git 설정 및 GitHub</summary>
  
 - 상위 폴더로 이동
