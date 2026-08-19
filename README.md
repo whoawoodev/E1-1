@@ -54,7 +54,7 @@ E1-1/
 | 05 | ✅ | 포트 매핑 및 브라우저 접속 확인 | [docs/05-port.md](docs/05-port.md) |
 | 06 | ✅ | 바인드 마운트로 호스트 변경 반영 | [docs/06-bind-mount.md](docs/06-bind-mount.md) |
 | 07 | ✅ | 볼륨 생성 및 데이터 영속성 검증 | [docs/07-volume.md](docs/07-volume.md) |
-| 08 | ⬜ | Git 사용자 정보·기본 브랜치 설정, GitHub 연동 | [docs/08-git-github.md](docs/08-git-github.md) |
+| 08 | ✅ | Git 사용자 정보·기본 브랜치 설정, GitHub 연동 | [docs/08-git-github.md](docs/08-git-github.md) |
 
 <br>
 
@@ -150,4 +150,4 @@ E1-1/
 
 ## VII. 트러블슈팅
 
-<!-- 실습 중 발생한 문제를 troubleshooting/ 아래 문서로 작성하고 여기에 링크 -->
+- [문제 1 — git push 인증 실패 (Password authentication is not supported)](troubleshooting/README.md#문제-1--git-push-인증-실패-password-authentication-is-not-supported)
