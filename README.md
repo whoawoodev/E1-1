@@ -451,6 +451,7 @@ root@[컨테이너ID]:/# exit
 ```
 <br>
 <br>
+</details>
 
 <details>
 <summary>Dockerfile 커스텀 이미지 제작</summary>
